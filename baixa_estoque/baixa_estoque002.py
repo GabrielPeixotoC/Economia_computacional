@@ -22,8 +22,8 @@ quantidade = 0
 produto = input(' Qual foi o produto adquirido? ')
 quantidade = float(input('Qual foi a quantidade comprada? '))
 
-# Processamento e saída de dados
 
+# Processamento e saída de dados
 if produto in estoque:
     estoque[produto] = estoque[produto][0]-quantidade
     print(f'''
@@ -33,5 +33,5 @@ if produto in estoque:
 else:
     print(f'''
     O produto não está em nosso estoque.
-    Possuímos em nosso estoque os seguintes produtos: {list(estoque.keys())[:-1]} e {list(estoque.keys())[-1]}.
+    Possuímos em nosso estoque os seguintes produtos: {", ".join(list(estoque.keys())[:-1])} e {list(estoque.keys())[-1]}.
     ''')
